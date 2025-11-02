@@ -1,0 +1,13 @@
+Flask
+Flask-Cors
+gunicorn
+numpy
+pandas
+torch
+transformers
+openai
+whisper
+SpeechRecognition
+pydub
+soundfile
+tqdm
