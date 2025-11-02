@@ -51,7 +51,7 @@ asr = pipeline(
 '''
 
 # Load pretrained model
-asr = pipeline("automatic-speech-recognition", model="openai/whisper-small")
+asr = pipeline("automatic-speech-recognition", model="openai/whisper-tiny")
 
 # Load summarization model
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
@@ -149,4 +149,5 @@ def save():
 #  Run Server
 # -----------------------------
 if __name__ == "__main__":
-    app.run(port=8080, debug=True)
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
